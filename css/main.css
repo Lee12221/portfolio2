@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    transition: .6s;
+}
+div{transition: .6s;}
+
+section{height: 100vh;
+    position: relative;
+}
+/* 메뉴 투명도*/
+/* section:nth-child(1){background:rgb(255, 255, 255);} */
+    /* 디스플레이 고정 */
+section:nth-child(2){background: url("../img/Frame\ 1.png") center center / cover;}
+.bg{
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    background:rgb(255, 105, 30);
+}
+/*표지디자인 */
+
+
+.gnb{
+    position: fixed;
+    top:50%; right:-10%;
+    transform: translate(-50%,-50%);
+    /* background:rgba(255, 255, 255, .8); */
+    color:rgb(255, 197, 61);
+    width: 120px;
+    text-align: center;
+    line-height: 40px;
+    opacity:100%;
+    transition: .6s;
+    z-index:9999;
+}
+.gnb.on{
+    right:0;
+    opacity: 1;
+}
+.gnb a:hover{background:none;
+color:rgb(240, 151, 34);
+transition: .1s; 
+font-weight: bold;
+}
+.gnb.on.first a:hover{
+    color: #fff;
+}
+
+
+.burger{
+    width: 40px;height: 40px;
+    position: fixed;
+    top:40px; right: 40px; 
+    z-index: 9999;           
+}
+.burger li{
+    height: 8px; background:rgb(255, 197, 61);
+    position: relative;
+    transition: .6s;
+    border-radius: 20px;
+}
+.burger.first li{
+    background: #fff;
+}
+.burger li:nth-child(even){top:8px;}
+.burger.on li:nth-child(1),
+.burger.on li:nth-child(4){
+    opacity: 0;
+}
+.burger.on li:nth-child(2){
+    transform: rotate(45deg);
+}
+.burger.on li:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.title{
+    width:50%;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.apple{
+    width: 100%;  
+    position: relative;                      
+    z-index: -1;
+}
+
+.dotmenu a{
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background:rgb(255, 197, 61);
+    transition: 1s;            
+}
+.dotmenu a.on{
+    width: 15px; height: 15px;
+    background: rgb(240, 151, 34);
+}
+.dotmenu a.on.first{
+    background:#fff;
+}
+.dotmenu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+/* section ani */
+section .s_title{
+    position: absolute;
+    left:-10%; top:10%;
+    opacity: 0;
+      
+}
+section .overview{
+    position: absolute;
+    left:-10%; bottom:10%;
+    opacity: 0;
+    
+}
+section .work{
+    position: absolute;
+    right:-30%; bottom:10%;
+    opacity: 0;
+    width: 50%;
+    
+}
+section.on .s_title{
+    top:10%; left:10%;
+    opacity: 1; 
+}
+section.on .overview{
+    bottom:10%; left:10%;
+    opacity: 1; 
+}
+section.on .work{
+
+    top: 50%; left:50%;
+    width: 70%;
+    height: 80vh;
+    background: #ccc;
+    transform:translate(-50%, -50%);
+    opacity: 1; 
+}
+
+
+
+/* section work 03*/
+
+section:nth-child(3) .work{
+    background: url( "../img/work07.jpg") no-repeat  center / 100%;
+}
+section:nth-child(3) .work a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(3) .work:hover a{
+    opacity: 1;
+}
+
+
+/* section work 04*/
+
+
+section:nth-child(4) .work{
+    background: url("../img/work08.jpg") no-repeat  center / 100%;
+ }
+section:nth-child(4) .work a{
+    display: flex;  
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(4) .work:hover a{
+    opacity: 1;
+}
+
+/* section work 08*/
+
+section:nth-child(5) .work{
+    background: url("../img/work09.jpg") no-repeat  center / 100%;
+}
+section:nth-child(5) .work a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(5) .work:hover a{
+    opacity: 1;
+}
+
+/* section work 08 피그마222*/
+
+section:nth-child(6) .work{
+    background: url("../img/work10.jpg") no-repeat  center / 100%;
+}
+section:nth-child(6) .work img{
+    width: 100%;
+}
+section:nth-child(6) .work{
+    display: flex;    
+}
+section:nth-child(6) .work a{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(6) .work a:hover{
+    opacity: 1;
+}
+
+
+/* section work 08*/
+
+section:nth-child(7) .work{
+    background: url("../img/work04.jpg") no-repeat  center / 100%;
+}
+section:nth-child(7) .work a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(7) .work:hover a{
+    opacity: 1;
+}
+
+
+
+/* section work 06*/
+
+section:nth-child(8) .work{
+    background: url("../img/work03.jpg") no-repeat  center / 100%;
+}
+section:nth-child(8) .work a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+section:nth-child(8) .work:hover a{
+    opacity: 1;
+}
+
+
+/* section7 bxslider vbanner */
+
+#vBanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#vBanner .bx-wrapper{
+    background:none;
+}
+#vBanner .bx-prev{
+    left:-50px;
+}
+#vBanner .bx-next{
+    right:-50px;
+}
+/* hbanner */
+#hBanner{
+    width: 70%;    
+    height: 60vh;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-70%);
+}
+#hBanner .bx-wrapper{
+    background:none;
+}
+#hBanner .bx-prev{
+    left:-50px;
+}
+#hBanner .bx-next{
+    right:-50px;
+}
+
+
